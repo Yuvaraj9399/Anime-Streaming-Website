@@ -1,0 +1,570 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+                /* Nav Bar */
+nav{
+    height: 50px;width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0%;
+    background-color: #00031C;
+    color: #6B6D7E;
+    z-index: 1;
+                    
+    }
+nav h1{
+    font-size: 40px;
+    }
+                
+.subnav{
+    height: 70px;
+    display: flex;
+    font-size: 20px;
+    gap: 20px;
+    align-items: center;
+    transition: all 1s;
+    margin-left: 20px;              
+    }
+.subnav a:hover{
+    color: #6c52ee;
+}
+.search{
+    border: 1px solid black;
+    height: 40px;width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    padding: 2px;
+    border-radius: 20px;
+    background-color: #6c52ee;
+    
+}
+.search input{
+    width: 70%;height: 80%;
+    outline: none;
+    border-radius: 20px 0px 0px 20px;
+    border: none;
+    margin-left: 5px;
+}
+.search button{
+    width: 30%;height: 80%;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+    background-color: #6c52ee;
+}
+                
+.subnav a{
+    text-decoration: none;
+    color: #6B6D7E;
+                    
+    }
+nav #menu{
+    display: none;
+    }
+nav .menu{
+    display: none;
+    }
+input:checked ~ .subnav{
+    left: -5%;
+    }
+
+                        /* Home */
+main{
+    width: 100%;height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: white;
+    text-align: start;
+    gap: 20px;
+    
+    
+}
+main h1{
+    font-size: 70px;
+    padding-left: 30px;
+}
+main p{
+    padding-left: 30px;
+}
+h1 span{
+    color: #6c52ee;
+}
+main video{
+    width: 100%;height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(30%);
+}
+.circle{
+    width: 100px;height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-image:linear-gradient(90deg,#6c52ee,#b494e8);
+    margin-left: 30px;
+    
+}
+.circle1{
+    width: 60px;height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6c52ee;
+
+}
+.circle0{
+    width: 50px;height: 50px;
+    border-radius: 50%;
+    border: 3px solid #6c52ee;
+    position: absolute;
+    animation: waves 2s linear infinite;
+}
+@keyframes waves{
+    to{
+        transform: scale(2.5);
+    }
+}
+
+                            /* Latest Anime */
+
+article{
+    width: 100%;min-height: 80vh;
+    background-color: #00031C;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.l-container{
+    height: 300px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: space-evenly;
+}
+.l-card{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+
+    
+}
+.l-card img{
+    position: absolute;
+    
+    
+}
+.l-name{
+    background-color: #6c52ee;
+    text-align: center;
+    width: 100%;
+}
+.l-card:hover{
+    border: 12px solid #6c52ee;
+    border-radius: 10px;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.l-card:hover .l-name{
+    z-index: 1;
+}
+#latest h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+}
+.l-card button{
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    background-color: #b494e8;
+}
+.l-card h4{
+    color: white;
+}
+                            /* Genres */
+.section1{
+    width: 100%;height: 80vh;
+    background-color: #00031C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section1 h1{
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+}
+.section1 video{
+    width: 100%;height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+h3{
+    color: white;
+}
+.g-container{
+    width: 70%;height: 500px;
+    display: flex;
+}
+.g-box1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.g-box2{
+
+    width: 70%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.g-box2 input{
+    display: none;
+}
+
+.g-card,.g-card2,.g-card3,.g-card4{
+   
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 100%;
+}
+
+.g-poster{
+    width: 200px;height: 100%;
+    position: relative;
+}
+.g-poster img{
+    object-fit: cover;
+    position: absolute;
+}
+.g-poster video{
+    position: absolute;
+}
+#a:checked ~ .g-card{
+    left: 0%;
+    transition: 1s;
+}
+#h:checked ~ .g-card2{
+    left: 0%;
+    transition: 1s;
+}
+#r:checked ~ .g-card3{
+    left: 0%;
+    transition: 1s;
+}
+#s:checked ~ .g-card4{
+    left: 0%;
+    transition: 1s;
+}
+.g-poster:hover video{
+    z-index: 1;
+    transition: 1s;
+}
+
+
+                            /* Membership */
+.section2{
+    width: 100%;min-height: 85vh;
+    background-color: #00031C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.mh{
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+}
+.m-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.m-card{
+    height: 450px;width: 300px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #b494e8;
+    color: #00031C;
+}
+.m-card h1{
+    color: #00031C;
+}
+.m-card table{
+    font-size: 20px;
+}
+.m-card p{
+    font-size: 25px;
+}
+.m-card b{
+    font-size: 40px;
+}
+.m-card i:nth-child(2){
+    font-size: 60px;
+}
+.m-card td:nth-child(2) {
+    text-align: start;
+    padding-left: 10px;
+}
+.m-card button{
+    width: 150px;height: 50px;
+    background-color: #6c52ee;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+.m-card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.m-card:hover{
+    border-radius: 20px;
+}
+
+                /* Contact */
+footer{
+    width: 100%;min-height: 30vh;
+    display: flex;align-items: center;
+    justify-content: center;
+    background-color: #161934;
+}
+.con-container{
+    width: 70%;height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.con-box{
+    width: 200px;height: 100%;
+    padding-top: 30px;
+}
+.con-box3{
+    width: 300px;height: 100%;
+    
+}
+.con-box a{
+    text-decoration: none;
+    color: #6B6D7E;
+}
+.con-box p{
+    color: #6B6D7E;
+}
+.con-box h2{
+    color: white;
+}
+.con-box3 div{
+   border: 5px solid #6c52ee;
+   height: 40px;
+   border-radius: 5px;
+   
+}
+.con-box3 input{
+    width: 75%;height: 100%;
+    outline: none;
+    border: none;
+    
+}
+.con-box3 button{
+    width: 25.1%;
+    height: 100%;
+    margin-left: -4px;
+    color: white;
+    background-color: #6c52ee;
+    border: none;
+}
+
+
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    
+.subnav{
+    flex-direction: column;
+    height: auto;width: 110%;
+    position: fixed;
+    top: 50px;
+    left: 100%;
+    background-color: #00031C;
+    }
+.search{
+    margin-left: 5%;
+}
+main h1{
+    font-size: xx-large;
+}
+nav .menu{
+    position: absolute;
+    right: 2px;
+    top: 15px;
+    display: block;
+    font-size: large;
+    }
+.l-container{
+    grid-template-columns: auto;
+    height: auto;
+    gap: 40px;
+}
+.l-card{
+    height: 300px;
+}
+.g-container{
+    width: 100%;
+    flex-direction: column;
+}
+.g-box1,.g-box2{
+    width: 100%;
+}
+.m-container{
+    flex-direction: column;
+}
+.m-card{
+    width: 80%;
+}
+.con-container{
+    flex-direction: column;
+    height: auto;
+}
+.con-box3{
+    width: 100%;
+}
+.con-box3 button {
+    font-size: small
+};
+}
+
+@media only screen and (min-width:600px) and (max-width:900px){
+    
+    .subnav{
+        flex-direction: column;
+        height: auto;width: 110%;
+        position: fixed;
+        top: 50px;
+        left: 100%;
+        background-color: #00031C;
+        }
+    .search{
+        margin-left: 5%;
+    }
+    main h1{
+        font-size: 50px;
+    }
+    nav .menu{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        display: block;
+        font-size: large;
+        }
+    .l-container{
+        grid-template-columns: auto auto;
+        height: auto;
+        gap: 40px;
+    }
+    .l-card{
+        height: 300px;
+    }
+    .g-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .g-box1,.g-box2{
+        width: 100%;
+    }
+    .m-container{
+        flex-direction: column;
+    }
+    .m-card{
+        width: 80%;
+    }
+    .con-container{
+        height: auto;
+        flex-direction: column;
+    }
+    }
+
+    @media only screen and (min-width:900px) and (max-width:1200px){
+    
+        .subnav{
+            flex-direction: column;
+            height: auto;width: 110%;
+            position: fixed;
+            top: 50px;
+            left: 100%;
+            background-color: #00031C;
+            }
+        .search{
+            margin-left: 5%;
+        }
+        main h1{
+            font-size: 30px;
+        }
+        nav .menu{
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            display: block;
+            font-size: large;
+            }
+        .l-container{
+            grid-template-columns: auto auto auto;
+            height: auto;
+            gap: 40px;
+        }
+        .l-card{
+            height: 300px;
+        }
+        .g-container{
+            width: 100%;
+    
+        }
+        .g-box1,.g-box2{
+            width: 100%;
+        }
+        .m-card{
+            width: 80%;
+        }
+        }
